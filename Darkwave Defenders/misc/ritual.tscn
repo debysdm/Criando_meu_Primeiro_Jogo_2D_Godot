@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6wsg8q4fpus6"]
 
 [ext_resource type="Script" path="res://misc/ritual.gd" id="1_jco7j"]
-[ext_resource type="Texture2D" uid="uid://b0ukoy6gq42sj" path="res://addons/Kenney's Particle Pack/light_01.png" id="2_0rwda"]
-[ext_resource type="Texture2D" uid="uid://cx3ql4whiop83" path="res://addons/Kenney's Particle Pack/light_02.png" id="2_07e4j"]
-[ext_resource type="Texture2D" uid="uid://ilfldies52i5" path="res://addons/Kenney's Particle Pack/twirl_03.png" id="4_yif6t"]
+[ext_resource type="Texture2D" uid="uid://c1spw74c56xuk" path="res://addons/Kenney's Particle Pack/smoke_09.png" id="2_u0bb2"]
+[ext_resource type="Texture2D" uid="uid://na6ab6ul6dct" path="res://addons/Kenney's Particle Pack/light_03.png" id="3_h723w"]
+[ext_resource type="Texture2D" uid="uid://dgcjgc1m231o4" path="res://addons/Kenney's Particle Pack/twirl_01.png" id="4_a5lyj"]
 
 [sub_resource type="Animation" id="Animation_amtmy"]
 length = 0.001
@@ -196,22 +196,22 @@ autoplay = "default"
 speed_scale = 1.5
 
 [node name="Images" type="Node2D" parent="."]
-modulate = Color(0.956863, 0, 0, 1)
+modulate = Color(1, 0, 0.0833335, 1)
 
 [node name="Circle03" type="Sprite2D" parent="Images"]
 material = SubResource("CanvasItemMaterial_fepv3")
-scale = Vector2(0.78708, 0.785333)
-texture = ExtResource("2_0rwda")
+scale = Vector2(1.367, 1.364)
+texture = ExtResource("2_u0bb2")
 
 [node name="Light02" type="Sprite2D" parent="Images"]
 material = SubResource("CanvasItemMaterial_fepv3")
 scale = Vector2(0.590331, 0.590331)
-texture = ExtResource("2_07e4j")
+texture = ExtResource("3_h723w")
 
 [node name="Magic02" type="Sprite2D" parent="Images"]
 material = SubResource("CanvasItemMaterial_fepv3")
 scale = Vector2(1.53358, 1.53358)
-texture = ExtResource("4_yif6t")
+texture = ExtResource("4_a5lyj")
 
 [node name="Area2D" type="Area2D" parent="."]
 

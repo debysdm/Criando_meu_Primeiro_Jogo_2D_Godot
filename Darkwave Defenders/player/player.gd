@@ -18,6 +18,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
+@onready var health_progress_bar: ProgressBar = $HealthProgressBar
 
 var input_vector: Vector2 = Vector2(0, 0)
 var is_running: bool = false
@@ -26,6 +27,13 @@ var is_attacking: bool = false
 var attack_cooldown: float = 0.0
 var hitbox_cooldown: float = 0.0
 var ritual_cooldown: float = 0.0
+
+
+signal meat_collected(value:int)
+
+
+func _ready():
+	GameManager.player = self
 
 
 func _process(delta: float) -> void:
@@ -49,6 +57,10 @@ func _process(delta: float) -> void:
 	
 	# Ritual
 	update_ritual(delta)
+	
+	# Atualizar health bar
+	health_progress_bar.max_value = max_health
+	health_progress_bar.value = health
 
 
 func _physics_process(delta: float) -> void:

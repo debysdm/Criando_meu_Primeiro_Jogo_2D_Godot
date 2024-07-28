@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bt7gp3ectxhvy"]
+[gd_scene load_steps=72 format=3 uid="uid://bt7gp3ectxhvy"]
 
 [ext_resource type="Texture2D" uid="uid://b7euwf8cji882" path="res://addons/Tiny Swords/Terrain/Ground/Shadows.png" id="1_5ctwr"]
 [ext_resource type="Texture2D" uid="uid://dcdhmrxvhc1ua" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" id="2_f0f1f"]
@@ -53,9 +53,24 @@
 [ext_resource type="Texture2D" uid="uid://cluao7pi5nxjm" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="51_yumqk"]
 [ext_resource type="Texture2D" uid="uid://00d50ye5ufiv" path="res://addons/Tiny Swords/Resources/Resources/W_Idle.png" id="52_jbkck"]
 [ext_resource type="Texture2D" uid="uid://dojodwya7evvf" path="res://addons/Tiny Swords/Resources/Resources/W_Spawn.png" id="53_w0hhd"]
-[ext_resource type="Texture2D" uid="uid://dgcjgc1m231o4" path="res://addons/Kenney's Particle Pack/twirl_01.png" id="54_6post"]
-[ext_resource type="Texture2D" uid="uid://ndoc8m5ud61s" path="res://addons/Kenney's Particle Pack/twirl_02.png" id="55_ikyms"]
-[ext_resource type="Texture2D" uid="uid://ilfldies52i5" path="res://addons/Kenney's Particle Pack/twirl_03.png" id="56_4wfwy"]
+[ext_resource type="Texture2D" uid="uid://bx1xa65vtyixf" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="54_8v2wn"]
+[ext_resource type="Texture2D" uid="uid://ba285ssmlmp62" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="55_oghpa"]
+[ext_resource type="Texture2D" uid="uid://c37pndlwm4q0t" path="res://addons/Tiny Swords/UI/Banners/Carved_9Slides.png" id="56_7t5x7"]
+[ext_resource type="Texture2D" uid="uid://dtebh36cfxhlc" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_9Slides.png" id="57_q7ere"]
+[ext_resource type="Texture2D" uid="uid://dq42ntv3s1qhv" path="res://addons/Tiny Swords/UI/Buttons/Button_Disable_9Slides.png" id="58_8ohcl"]
+[ext_resource type="Texture2D" uid="uid://bd4f04b2gt7j0" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue.png" id="59_88v60"]
+[ext_resource type="Texture2D" uid="uid://bsk25gpnwjs44" path="res://addons/Tiny Swords/UI/Buttons/Button_Blue_Pressed.png" id="60_tujcv"]
+[ext_resource type="Texture2D" uid="uid://coehm1sj8ot58" path="res://addons/Tiny Swords/UI/Buttons/Button_Red.png" id="61_wvfwy"]
+[ext_resource type="Texture2D" uid="uid://cj3jodupk2bf2" path="res://addons/Tiny Swords/UI/Buttons/Button_Hover.png" id="62_8l8t0"]
+[ext_resource type="Texture2D" uid="uid://q7rrtn7ol7ym" path="res://addons/Tiny Swords/UI/Buttons/Button_Red_Pressed.png" id="63_gpulk"]
+[ext_resource type="Texture2D" uid="uid://766hcw6jubrn" path="res://addons/Tiny Swords/UI/Icons/Regular_07.png" id="64_f2odc"]
+[ext_resource type="Texture2D" uid="uid://bsiy3u4fwq2ap" path="res://addons/Tiny Swords/UI/Icons/Regular_02.png" id="65_4mf2t"]
+[ext_resource type="Texture2D" uid="uid://c65afdpwbxfdr" path="res://addons/Tiny Swords/UI/Icons/Regular_03.png" id="66_uylx1"]
+[ext_resource type="Texture2D" uid="uid://b68iavh4nw3tk" path="res://addons/Tiny Swords/UI/Pointers/01.png" id="67_la7ky"]
+[ext_resource type="Texture2D" uid="uid://11rkfxhyebhp" path="res://addons/Tiny Swords/UI/Pointers/02.png" id="68_mam17"]
+[ext_resource type="Texture2D" uid="uid://c8udfx5so0pcy" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Blue_3Slides.png" id="69_6d56d"]
+[ext_resource type="Texture2D" uid="uid://bkfotfo5ndv61" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Yellow_3Slides.png" id="70_ywnky"]
+[ext_resource type="Texture2D" uid="uid://cu48qh4ctofaq" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="71_3vwg2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -276,14 +291,74 @@ texture = ExtResource("52_jbkck")
 position = Vector2(756, 2711)
 texture = ExtResource("53_w0hhd")
 
-[node name="Twirl01" type="Sprite2D" parent="."]
-position = Vector2(-550, -840)
-texture = ExtResource("54_6post")
+[node name="BannerHorizontal" type="Sprite2D" parent="."]
+position = Vector2(8497, 1049)
+texture = ExtResource("54_8v2wn")
 
-[node name="Twirl02" type="Sprite2D" parent="."]
-position = Vector2(-3, -896)
-texture = ExtResource("55_ikyms")
+[node name="BannerVertical" type="Sprite2D" parent="."]
+position = Vector2(8130, 810)
+texture = ExtResource("55_oghpa")
 
-[node name="Twirl03" type="Sprite2D" parent="."]
-position = Vector2(-1018, -420)
-texture = ExtResource("56_4wfwy")
+[node name="Carved9Slides" type="Sprite2D" parent="."]
+position = Vector2(8352, 754)
+texture = ExtResource("56_7t5x7")
+
+[node name="ButtonBlue9Slides" type="Sprite2D" parent="."]
+position = Vector2(7757, 938)
+texture = ExtResource("57_q7ere")
+
+[node name="ButtonDisable9Slides" type="Sprite2D" parent="."]
+position = Vector2(7969, 1054)
+texture = ExtResource("58_8ohcl")
+
+[node name="ButtonBlue" type="Sprite2D" parent="."]
+position = Vector2(7632, 728)
+texture = ExtResource("59_88v60")
+
+[node name="ButtonBluePressed" type="Sprite2D" parent="."]
+position = Vector2(7720, 722)
+texture = ExtResource("60_tujcv")
+
+[node name="ButtonRed" type="Sprite2D" parent="."]
+position = Vector2(7800, 726)
+texture = ExtResource("61_wvfwy")
+
+[node name="ButtonHover" type="Sprite2D" parent="."]
+position = Vector2(7883, 733)
+texture = ExtResource("62_8l8t0")
+
+[node name="ButtonRedPressed" type="Sprite2D" parent="."]
+position = Vector2(7971, 732)
+texture = ExtResource("63_gpulk")
+
+[node name="Regular07" type="Sprite2D" parent="."]
+position = Vector2(7768, 952)
+texture = ExtResource("64_f2odc")
+
+[node name="Regular02" type="Sprite2D" parent="."]
+position = Vector2(7733, 904)
+texture = ExtResource("65_4mf2t")
+
+[node name="Regular03" type="Sprite2D" parent="."]
+position = Vector2(7797, 898)
+texture = ExtResource("66_uylx1")
+
+[node name="20" type="Sprite2D" parent="."]
+position = Vector2(7902, 835)
+texture = ExtResource("67_la7ky")
+
+[node name="21" type="Sprite2D" parent="."]
+position = Vector2(7992, 862)
+texture = ExtResource("68_mam17")
+
+[node name="RibbonBlue3Slides" type="Sprite2D" parent="."]
+position = Vector2(8262, 988)
+texture = ExtResource("69_6d56d")
+
+[node name="RibbonYellow3Slides" type="Sprite2D" parent="."]
+position = Vector2(8264, 1066)
+texture = ExtResource("70_ywnky")
+
+[node name="RibbonRed3Slides" type="Sprite2D" parent="."]
+position = Vector2(8266, 1153)
+texture = ExtResource("71_3vwg2")

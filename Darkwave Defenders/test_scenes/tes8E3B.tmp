@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://baqy1lqdnsnr4"]
+
+[ext_resource type="PackedScene" uid="uid://bde0jlck61cdp" path="res://player/player.tscn" id="1_a2f68"]
+[ext_resource type="Texture2D" uid="uid://bx1xa65vtyixf" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_up5t1"]
+[ext_resource type="PackedScene" uid="uid://djjycvpoebuqd" path="res://enemies/sheep.tscn" id="3_wia37"]
+[ext_resource type="PackedScene" uid="uid://qlbju1yy86rl" path="res://enemies/goblin.tscn" id="4_qbfbe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a01v"]
+texture = ExtResource("2_up5t1")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l06vs"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="TestUi" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_a2f68")]
+position = Vector2(543, 359)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 20.0
+offset_right = 42.0
+offset_bottom = 71.0
+grow_horizontal = 2
+text = "08:50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -414.0
+offset_bottom = 90.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8a01v")
+
+[node name="GoldLabel" type="Label" parent="CanvasLayer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 65.0
+offset_top = -26.0
+offset_right = 155.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "20,000 Gold"
+label_settings = SubResource("LabelSettings_l06vs")
+
+[node name="MeatLabel" type="Label" parent="CanvasLayer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -28.0
+offset_right = -73.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50 Meat"
+label_settings = SubResource("LabelSettings_l06vs")
+
+[node name="Sheep" parent="." instance=ExtResource("3_wia37")]
+position = Vector2(1763, 100)
+
+[node name="Goblin" parent="." instance=ExtResource("4_qbfbe")]
+position = Vector2(940, 372)
+
+[node name="Sheep2" parent="." instance=ExtResource("3_wia37")]
+position = Vector2(1680, 258)
