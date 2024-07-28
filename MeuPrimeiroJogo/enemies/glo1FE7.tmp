@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://sm3hxefp2ggm"]
+
+[ext_resource type="Texture2D" uid="uid://dbgqmcels0673" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png" id="1_33oul"]
+[ext_resource type="Script" path="res://enemies/behaviors/follow_player.gd" id="1_i1ykq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r7o4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxe25"]
+atlas = ExtResource("1_33oul")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i38nd"]
+atlas = ExtResource("1_33oul")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67ai6"]
+atlas = ExtResource("1_33oul")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdseq"]
+atlas = ExtResource("1_33oul")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4mxu"]
+atlas = ExtResource("1_33oul")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmtcw"]
+atlas = ExtResource("1_33oul")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqyar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxe25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i38nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67ai6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdseq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4mxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmtcw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Globin" type="CharacterBody2D"]
+position = Vector2(98, 96)
+motion_mode = 1
+script = ExtResource("1_i1ykq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 4.76837e-07)
+scale = Vector2(2.18667, 1.70765)
+shape = SubResource("CapsuleShape2D_r7o4f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pqyar")
+autoplay = "default"
+frame_progress = 0.353157
